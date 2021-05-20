@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dibbendu Koley</title>
+
+  <link rel="stylesheet" href="./css/contact.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+  <header>
+    <nav id="mynav">
+
+      <div id="logo">
+        <h1><a href="./index.html" id="dk-logo">Dibbendu Koley</a></h1>
+      </div>
+
+      <div class="hamburger-menu">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul>
+          <li><a href="./index.html">Projects</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Let's Talk</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <form action="" method="get" id="contact-form">
+      <h2>Get in touch!</h2>
+      <div class="alert">Your message has been sent</div>
+      <div class="form-name-email">
+        <span>
+          <label for="name">Your Name </label>
+          <input type="text" name="name" id="name" placeholder="Bruce" required>
+        </span>
+        <span>
+          <label for="email">Email </label>
+          <input type="email" name="email" id="email" placeholder="bruce@wayne.com" required>
+        </span>
+      </div>
+      <label for="message">Message </label>
+      <textarea type="text" name="message" id="message" rows="8" cols="50" required
+        placeholder="I want to talk about..."></textarea>
+      <input type="submit" value="Send message" id="submit">
+    </form>
+
+    <div class="contact">
+      <ul class="info">
+        <li>+91(8447-294960)</li>
+        <li>dibbenduk@gmail.com</li>
+        <li>New Delhi, IND</li>
+      </ul>
+      <ul class="icons">
+        <a href="https://www.facebook.com/dibbendu.koley" target="_blank">
+          <li><img src="./images/icons/contact/facebook.svg" alt="facebook"></li>
+        </a>
+        <a href="https://www.instagram.com/dibbendu.k/?hl=en" target="_blank">
+          <li><img src="./images/icons/contact/instagram.svg" alt="instagram"></li>
+        </a>
+        <a href="https://www.linkedin.com/in/dibbendu-koley/" target="_blank">
+          <li><img src="./images/icons/contact/linkedin.svg" alt="linkedin"></li>
+        </a>
+        <a href="https://twitter.com/ruinfirefly" target="_blank">
+          <li><img src="./images/icons/contact/twitter.svg" alt="twitter"></li>
+        </a>
+      </ul>
+
+    </div>
+    <p class="copyright">
+      copyright@dibbendu
+    </p>
+  </header>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
