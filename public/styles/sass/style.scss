@@ -1,0 +1,569 @@
+@import "./base/variables";
+@import "./base/base";
+@import "./components/header";
+@import "./components/contact-me";
+@import "./components/footer";
+@import "./base/animation";
+
+.herobox {
+  position: relative;
+  margin-top: 1rem;
+  height: 50rem;
+
+  .slogan {
+    font-family: $head-font;
+    position: absolute;
+    display: block;
+    top: 5rem;
+    left: 7rem;
+    font-size: 2.5vw;
+
+    h1 {
+      color: $slogan-color;
+      position: relative;
+      padding: 0;
+      margin-left: -0.3rem;
+
+      &::before {
+        position: absolute;
+        content: "Design & Develop";
+        width: 100%;
+        left: 3px;
+        top: 0;
+        color: $slogan-color-black;
+        z-index: -1;
+      }
+      &::after {
+        position: absolute;
+        content: "Design & Develop";
+        width: 100%;
+        top: -2px;
+        left: -2px;
+        color: $slogan-color-white;
+        z-index: -1;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: $para-font;
+      width: 70%;
+      margin: 1rem 0 2rem;
+    }
+
+    a {
+      font-family: $para-font;
+      font-size: 18px;
+      border-radius: 10px;
+      display: inline-block;
+      color: $color-white;
+      background: $button-color-red;
+      box-shadow: 5px 5px 15px rgba(($button-color-red), 0.76);
+      transition: all 250ms ease;
+      padding: 1em 1.2em;
+
+      &:hover {
+        background-color: $button-color-green;
+        box-shadow: 5px 5px 15px rgba(($button-color-green), 0.76);
+      }
+      &:active {
+        transform: translateY(5px);
+        box-shadow: none;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 2rem;
+    width: 60rem;
+    height: auto;
+    z-index: -1;
+  }
+}
+
+.main {
+  text-align: center;
+  width: 50%;
+  margin: 5rem auto 10em;
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 2.2rem;
+  .intro {
+    margin-bottom: 4rem;
+  }
+
+  a {
+    color: $accent-red;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  #title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 4rem auto;
+    color: $black-text;
+    position: relative;
+    width: auto;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 75%;
+      height: 2px;
+      background: $black-text;
+      top: 50%;
+      left: -80%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 75%;
+      height: 2px;
+      background: $black-text;
+      top: 50%;
+      right: -80%;
+    }
+  }
+
+  .project-item {
+    padding: 5rem;
+    width: auto;
+    position: relative;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      a {
+        text-decoration: none;
+        color: $black-text;
+      }
+    }
+
+    &_content {
+      display: grid;
+      grid-template-columns: minmax(300px, 50%) 1fr;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: auto;
+        width: 90%;
+        box-shadow: 10px 10px 20px rgba(($color-black), 0.349);
+        border-radius: 20px;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $color-black;
+        background: $project-textbox-color;
+        line-height: 30px;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 5px 5px 1px rgb(119, 177, 153);
+        .check-github {
+          background: $check-github-black;
+          font-weight: 400;
+          color: $check-github-white;
+          text-decoration: none;
+          grid-column: 2/3;
+          width: fit-content;
+          padding: 10px 30px;
+          padding-right: 70px;
+          position: relative;
+          margin-top: 2rem;
+          display: block;
+          transition: all 200ms ease;
+          border-radius: 13px;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 3px 3px 1px #808080;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            top: 8px;
+            right: 60px;
+            width: 1px;
+            height: 35px;
+            background: #bfbfbf;
+          }
+          img {
+            position: absolute;
+            width: 32px;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            height: auto;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ----------------------------------- Media queries ------------------------------- */
+
+@media (max-width: 1550px) {
+  .herobox {
+    .slogan {
+      font-size: 2.8vw;
+    }
+    img {
+      width: 55rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .herobox {
+    height: 52rem;
+    .slogan {
+      font-size: 3.3vw;
+      top: 3rem;
+      left: 4rem;
+    }
+
+    img {
+      width: 50rem;
+    }
+  }
+
+  .main {
+    width: 60%;
+    margin-top: 2em;
+    font-size: 1.2em;
+    line-height: 2rem;
+    .intro {
+      margin-bottom: 2em;
+    }
+  }
+
+  #projects {
+    #title {
+      font-size: 3rem;
+    }
+
+    .project-item {
+      padding: 5rem;
+
+      h1 {
+        font-size: 1.6rem;
+      }
+      .project-item_content {
+        p {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .herobox {
+    height: 55rem;
+
+    .slogan {
+      top: 2rem;
+      left: 4rem;
+    }
+  }
+
+  #projects {
+    .project-item {
+      .project-item_content {
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .herobox {
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr 88% 1fr;
+    grid-template-rows: 36% 1fr;
+
+    .slogan {
+      position: static;
+      text-align: center;
+      font-size: 2.2rem;
+      width: 100%;
+      grid-column: 2/3;
+
+      h1 {
+        &::before {
+          left: 2px;
+        }
+        &::after {
+          display: none;
+        }
+      }
+      p {
+        padding-top: 2rem;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+      a {
+        padding: 0.8em 1em;
+      }
+    }
+
+    img {
+      position: relative;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 36rem;
+      margin: auto;
+    }
+  }
+
+  .main {
+    margin-top: 3em;
+    width: 70%;
+  }
+
+  #projects {
+    .project-item {
+      padding: 4em;
+
+      h1 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .project-item_content {
+        grid-template-columns: 1fr;
+        width: 100%;
+        img {
+          width: 80%;
+          margin: auto;
+        }
+        p {
+          width: 80%;
+          margin: 3em auto;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 822px) {
+  .herobox {
+    grid-template-columns: 1fr 90% 1fr;
+    height: 60rem;
+  }
+
+  .main {
+    width: 78%;
+  }
+
+  #projects {
+    #title {
+      margin: 1em auto;
+      font-size: 2.6em;
+    }
+    .project-item {
+      padding: 2.6em 1em;
+      h1 {
+        font-size: 1.5rem;
+      }
+      .project-item_content {
+        img {
+          width: 85%;
+        }
+        p {
+          width: 85%;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .herobox {
+    height: 52rem;
+
+    .slogan {
+      font-size: 2rem;
+      h1 {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+      p {
+        width: 100%;
+        font-size: 1.1rem;
+      }
+      a {
+        font-size: 1rem;
+        padding: 0.8em 1em;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .main {
+    margin-top: 0em;
+    line-height: 1.8rem;
+    width: 80%;
+    margin-bottom: 5em;
+    .intro {
+      margin-bottom: 2rem;
+      font-size: 0.9em;
+    }
+    a {
+      font-size: 1em;
+    }
+  }
+  #projects {
+    #title {
+      font-size: 2em;
+      margin-bottom: 2em;
+    }
+
+    .project-item {
+      padding: 2em 0.6em;
+
+      .project-item_content {
+        img {
+          width: 80%;
+        }
+        p {
+          width: 80%;
+          font-size: 1em;
+          .check-github {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .herobox {
+    .slogan {
+      width: 100%;
+      a {
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #projects {
+    .project-item {
+      padding: 0;
+      .project-item_content {
+        img {
+          width: 85%;
+        }
+        p {
+          width: auto;
+          padding: 2em;
+          margin: 2em auto;
+          border-radius: 0;
+          box-shadow: none;
+          .check-github {
+            img {
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .herobox {
+    height: 42rem;
+    .slogan {
+      font-size: 1.2rem;
+      width: 100%;
+      p {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+      }
+      a {
+        font-size: 1rem;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .main {
+    font-size: 1.1em;
+    margin-bottom: 6em;
+  }
+  #projects {
+    .project-item {
+      .project-item_content {
+        p {
+          line-height: 25px;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .herobox {
+    .slogan {
+      font-size: 0.9rem;
+      p {
+        margin-bottom: 2.2rem;
+      }
+    }
+  }
+
+  .main {
+    line-height: 24px;
+    font-size: 1em;
+    margin-bottom: 5em;
+  }
+  #projects {
+    #title {
+      font-size: 1.5em;
+    }
+    .project-item {
+      h1 {
+        font-size: 1.2em;
+      }
+      .project-item_content {
+        img {
+          width: 88%;
+        }
+        p {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}

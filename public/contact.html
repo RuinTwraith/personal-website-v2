@@ -1,100 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dibbendu Koley</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dibbendu Koley</title>
+    <link rel="stylesheet" href="./styles/css/contact.css" />
 
-  <link rel="stylesheet" href="./css/contact.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-    rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-</head>
+  <body>
+    <div class="header">
+      <nav id="mynav">
+        <div id="logo">
+          <h1><a href="./index.html" id="dk-logo">Dibbendu Koley</a></h1>
+        </div>
 
-<body>
+        <div class="hamburger-menu">
+          <input type="checkbox" />
 
-  <header>
-    <nav id="mynav">
-
-      <div id="logo">
-        <h1><a href="./index.html" id="dk-logo">Dibbendu Koley</a></h1>
-      </div>
-
-      <div class="hamburger-menu">
-        <input type="checkbox" />
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul>
-          <li><a href="./index.html">Projects</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./contact.html">Let's Talk</a></li>
-        </ul>
-      </div>
-
-    </nav>
-
-    <form action="" method="get" id="contact-form">
-      <h2>Get in touch!</h2>
-      <div class="alert">Your message has been sent</div>
-      <div class="form-name-email">
-        <span>
-          <label for="name">Your Name </label>
-          <input type="text" name="name" id="name" placeholder="Bruce" required>
-        </span>
-        <span>
-          <label for="email">Email </label>
-          <input type="email" name="email" id="email" placeholder="bruce@wayne.com" required>
-        </span>
-      </div>
-      <label for="message">Message </label>
-      <textarea type="text" name="message" id="message" rows="8" cols="50" required
-        placeholder="I want to talk about..."></textarea>
-      <input type="submit" value="Send message" id="submit">
-    </form>
-
-    <div class="contact">
-      <ul class="info">
-        <li>+91(8447-294960)</li>
-        <li>dibbenduk@gmail.com</li>
-        <li>New Delhi, IND</li>
-      </ul>
-      <ul class="icons">
-        <a href="https://www.facebook.com/dibbendu.koley" target="_blank">
-          <li><img src="./images/icons/contact/facebook.svg" alt="facebook"></li>
-        </a>
-        <a href="https://www.instagram.com/dibbendu.k/?hl=en" target="_blank">
-          <li><img src="./images/icons/contact/instagram.svg" alt="instagram"></li>
-        </a>
-        <a href="https://www.linkedin.com/in/dibbendu-koley/" target="_blank">
-          <li><img src="./images/icons/contact/linkedin.svg" alt="linkedin"></li>
-        </a>
-        <a href="https://twitter.com/ruinfirefly" target="_blank">
-          <li><img src="./images/icons/contact/twitter.svg" alt="twitter"></li>
-        </a>
-      </ul>
-
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul>
+            <li><a href="./index.html">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Let's Talk</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <p class="copyright">
-      copyright@dibbendu
-    </p>
-  </header>
-  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./app.js"></script>
 
-</body>
+    <div class="contact-form">
+      <form
+        action=""
+        method="get"
+        id="contact-form-body"
+        class="contact-form__body"
+      >
+        <h2 class="contact-form__body--heading">Get in touch!</h2>
+        <div class="alert">Your message has been sent</div>
+        <div class="contact-form__body--inputs">
+          <label for="name"
+            >Your Name
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Bruce"
+              required
+            />
+          </label>
 
+          <label for="email"
+            >Email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="bruce@wayne.com"
+              required
+            />
+          </label>
+
+          <label for="message"
+            >Message
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              rows="8"
+              cols="50"
+              required
+              placeholder="I want to talk about..."
+            ></textarea>
+          </label>
+        </div>
+
+        <input
+          type="submit"
+          value="Send message"
+          id="submit"
+          class="submit-btn"
+        />
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="footer__top">
+        <div class="footer__top--text">
+          <div class="footer__top--text-left">
+            <p>Quick Links</p>
+            <ul>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="./index.html">Projects</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__top--text-right">
+            <p>Say Hi !</p>
+            <ul>
+              <li>dibbenduk@gmail.com</li>
+              <li>+91(8447-294960)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__top--icons">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/dibbendu.koley" target="_blank"
+                ><img src="./images/icons/facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ruinfirefly" target="_blank"
+                ><img src="./images/icons/twitter.svg" alt="twitter"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/dibbendu-koley/"
+                target="_blank"
+                ><img src="./images/icons/linkedin.svg" alt="linkedin"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/dibbendu.k/?hl=en"
+                target="_blank"
+                ><img src="./images/icons/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/RuinTwraith" target="_blank"
+                ><img src="./images/icons/github.svg" alt="gtihub"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/dibbendukoley" target="_blank"
+                ><img src="./images/icons/behance.svg" alt="behance"
+              /></a>
+            </li>
+            <li>
+              <a href="https://unsplash.com/@ruin_firefly" target="_blank"
+                ><img src="./images/icons/unsplash.svg" alt="unsplash"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>copyright@dibbendu</p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,88 @@
+.contact-me {
+  text-align: center;
+  background: $textbox-background;
+  box-shadow: 10px 10px 30px #a4c0b7, -10px -10px 30px #eafafa;
+  width: 40%;
+  margin: 6em auto;
+  padding: 2em 0 5em 0;
+  border-radius: 20px;
+  h2 {
+    padding: 1em 0 3em 0;
+  }
+  a {
+    margin-bottom: 2em;
+    border-radius: 10px;
+    color: $color-white;
+    padding: 1em 1.2em;
+    background: $button-color-red;
+    box-shadow: 5px 5px 15px rgba(($button-color-red), 0.76);
+    transition: all 300ms ease;
+    &:hover {
+      background: $button-color-green;
+      box-shadow: 5px 5px 15px rgba(($button-color-green), 0.76);
+    }
+    &:active {
+      transform: translateY(5px);
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .contact-me {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-me {
+    width: 60%;
+    a {
+      padding: 0.8em 1em;
+    }
+  }
+}
+
+@media (max-width: 822px) {
+  .contact-me {
+    width: 65%;
+    h2 {
+      padding-bottom: 2em;
+    }
+    a {
+      padding: 0.8em 1em;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .contact-me {
+    width: 80%;
+    font-size: 0.8em;
+    a {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-me {
+    font-size: 0.8em;
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-me {
+    width: 100%;
+    border-radius: 0;
+    font-size: 0.7em;
+    margin: 4em 0;
+    padding: 2em 0 4em 0;
+    a {
+      border-radius: 5px;
+    }
+  }
+}

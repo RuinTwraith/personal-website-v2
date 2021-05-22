@@ -1,0 +1,217 @@
+.header {
+  height: 70px;
+
+  nav {
+    font-family: $head-font;
+    display: flex;
+    justify-content: space-between;
+    max-width: $body-max-width;
+    margin: 0 auto;
+    height: 60px;
+    padding-top: 1.2rem;
+    z-index: 3;
+
+    #logo {
+      font-size: 1.2rem;
+      padding-left: 2rem;
+      #dk-logo {
+        color: $black-text;
+        text-decoration: none;
+      }
+    }
+
+    .hamburger-menu {
+      input {
+        display: none;
+      }
+      ul {
+        display: flex;
+        width: 500px;
+        text-decoration: none;
+        list-style-type: none;
+        justify-content: space-around;
+        padding-top: 5px;
+
+        li {
+          a {
+            position: relative;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $black-text;
+            padding: 0.2em 0.6em;
+            transition: color 0.3s ease;
+
+            &::after {
+              background: none repeat scroll 0 0 transparent;
+              bottom: -2px;
+              content: "";
+              display: block;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              background: $accent-red;
+              transition: width 0.3s ease 0s, left 0.3s ease 0s;
+              width: 0;
+            }
+
+            &:hover {
+              color: $accent-red;
+
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    nav {
+      .hamburger-menu {
+        position: relative;
+        top: 5px;
+        right: 40px;
+        display: block;
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+
+        ul {
+          display: none;
+        }
+        input {
+          display: block;
+          width: 40px;
+          height: 32px;
+          position: absolute;
+          top: -5px;
+          right: -10px;
+
+          transition: all 2s ease-in-out;
+          cursor: pointer;
+
+          opacity: 0;
+          z-index: 2;
+
+          -webkit-touch-callout: none;
+
+          &:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(4px, -1px);
+            background: rgb(34, 34, 34);
+          }
+          &:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+          }
+          &:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(2px, -1px);
+          }
+          &:checked ~ ul {
+            display: block;
+            width: 150px;
+            position: absolute;
+            flex-direction: column;
+            top: -5px;
+            margin: 0;
+            right: -5px;
+            padding: 0;
+            border-radius: 10px;
+
+            li {
+              padding: 1em;
+              background: #cff3e8ff;
+              border-bottom: 1px solid rgb(26, 26, 26);
+              a {
+                color: $black-text;
+                font-size: 18px;
+                font-weight: 600;
+                &::after {
+                  display: none;
+                }
+                &:hover {
+                  color: $accent-blue;
+                  padding-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 7px;
+        position: relative;
+
+        background: $black-text;
+        border-radius: 5px;
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+        &:first-child {
+          transform-origin: 0% 0%;
+        }
+        &:nth-last-child(3) {
+          width: 25px;
+          transform-origin: 0% 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .header {
+    nav {
+      width: 100%;
+      span {
+        height: 3px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    nav {
+      h1 {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "DK";
+          display: block;
+          top: 0px;
+          left: 0px;
+        }
+        #dk-logo {
+          opacity: 0;
+          display: none;
+        }
+      }
+      .hamburger-menu {
+        input {
+          &:checked ~ ul {
+            li a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
