@@ -197,10 +197,16 @@
           display: block;
           top: 0px;
           left: 0px;
+          z-index: -1;
         }
         #dk-logo {
           opacity: 0;
           display: none;
+          width: 50px;
+          font-size: 0.4rem;
+          display: inline-block;
+          line-height: 20px;
+          z-index: 2;
         }
       }
       .hamburger-menu {
