@@ -1,0 +1,17 @@
+@mixin about-info-design {
+  background: $textbox-background;
+  box-shadow: $box-shadow-white;
+  border-radius: 20px;
+  text-align: center;
+
+  p {
+    font-size: $para-size;
+    font-family: $para-font;
+    line-height: 2em;
+  }
+}
+
+@mixin about-info-design-1700px {
+  justify-self: end;
+  width: 90%;
+}

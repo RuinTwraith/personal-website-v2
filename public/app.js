@@ -17,11 +17,11 @@ firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
 //reference messages collection
- var messageRef = firebase.database().ref('messages');
+var messageRef = firebase.database().ref('messages');
 
 
 
-document.getElementById("contact-form").addEventListener("submit", submitForm);
+document.getElementById("contact-form-body").addEventListener("submit", submitForm);
 
 // submit form
 function submitForm(e) {
@@ -31,7 +31,7 @@ function submitForm(e) {
   var name = getInputVal("name");
   var email = getInputVal("email");
   var message = getInputVal("message");
-  
+
   //save message
   saveMessage(name, email, message);
 
@@ -45,7 +45,7 @@ function submitForm(e) {
 
 
   //clear form
-  document.getElementById('contact-form').reset();
+  document.getElementById('contact-form-body').reset();
 }
 
 //funtion to get form values
@@ -85,7 +85,7 @@ window.addEventListener("scroll", function () {
 });
 
 /*-------------------- shortening the logo -------------------- */
-console.log("Change");
+/* console.log("Change");
 function logo_change() {
   var w = parseInt(window.innerWidth);
   if (w <= 375) {
@@ -102,7 +102,7 @@ $(window).resize(function (e) {
 $(document).ready(function (e) {
   logo_change();
   console.log("Change");
-});
+}); */
 
 /*-------------------- smooth scrolling -------------------- */
 
