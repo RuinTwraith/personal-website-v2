@@ -2,26 +2,26 @@
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
-  apiKey: "AIzaSyBMoVmhSDOY6HEFDJ46N3OMZ3mJ2nHxRa8",
-  authDomain: "dibbendukoley.firebaseapp.com",
-  databaseURL: "https://dibbendukoley.firebaseio.com",
-  projectId: "dibbendukoley",
-  storageBucket: "dibbendukoley.appspot.com",
-  messagingSenderId: "777858398703",
-  appId: "1:777858398703:web:de082a59f1559dd61b5e1a",
-  measurementId: "G-E5EN8RSX1L"
+const firebaseConfig = {
+  apiKey: "AIzaSyCOt8CktPjjFXB3mE6p78ER6-SNtk2WmqI",
+  authDomain: "dibbendu-koley-v2.firebaseapp.com",
+  databaseURL: "https://dibbendu-koley-v2-default-rtdb.firebaseio.com",
+  projectId: "dibbendu-koley-v2",
+  storageBucket: "dibbendu-koley-v2.appspot.com",
+  messagingSenderId: "1001132178209",
+  appId: "1:1001132178209:web:e2dc13c7e219d261059c60",
+  measurementId: "G-16H0QW2WY1",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
 //reference messages collection
-var messageRef = firebase.database().ref('messages');
+var messageRef = firebase.database().ref("messages");
 
-
-
-document.getElementById("contact-form-body").addEventListener("submit", submitForm);
+document
+  .getElementById("contact-form-body")
+  .addEventListener("submit", submitForm);
 
 // submit form
 function submitForm(e) {
@@ -36,16 +36,15 @@ function submitForm(e) {
   saveMessage(name, email, message);
 
   //show alert
-  document.querySelector('.alert').style.display = "block";
+  document.querySelector(".alert").style.display = "block";
 
   //hide alert after 3 seconds
   setTimeout(() => {
-    document.querySelector('.alert').style.display = "none";
+    document.querySelector(".alert").style.display = "none";
   }, 3000);
 
-
   //clear form
-  document.getElementById('contact-form-body').reset();
+  document.getElementById("contact-form-body").reset();
 }
 
 //funtion to get form values
@@ -53,17 +52,15 @@ function getInputVal(id) {
   return document.getElementById(id).value;
 }
 
-
 // save message to firebase
 function saveMessage(name, email, message) {
   var newMessageRef = messageRef.push();
   newMessageRef.set({
     name: name,
     email: email,
-    message: message
+    message: message,
   });
 }
-
 
 /* -------------------- Sticky navbar ---------------- */
 

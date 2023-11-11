@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "dibbendukoley"
-  }
+    "default": "dibbendu-koley-v2",
+    "master": "dibbendu-koley-v2"
+  },
+  "targets": {},
+  "etags": {}
 }
